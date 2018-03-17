@@ -2,7 +2,7 @@
   "name": "random-quote-machine",
   "version": "1.0.0",
   "description": "this is a random quote machine made for fCC intermediate front-end projects",
-  "main": "script.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jcunanan05/random-quote-machine#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.3"
   }
 }

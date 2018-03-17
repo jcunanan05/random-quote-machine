@@ -1,0 +1,22 @@
+{
+  "name": "random-quote-machine",
+  "version": "1.0.0",
+  "description": "this is a random quote machine made for fCC intermediate front-end projects",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcunanan05/random-quote-machine.git"
+  },
+  "author": "Jonathan Cunanan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcunanan05/random-quote-machine/issues"
+  },
+  "homepage": "https://github.com/jcunanan05/random-quote-machine#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

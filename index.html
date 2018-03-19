@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Random Quote Machine</title>
+</head>
+<body>
+  <h1>Random Quote Machine</h1>
+
+  <div>
+    <blockquote>
+      <p>Quote</p>
+
+      <footer>
+        <cite>- author</cite>
+      </footer>
+    </blockquote>
+  </div>
+  
+
+  <script type="text/javascript">
+    // var xhr = new XMLHttpRequest();
+    var quoteUrl = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en";
+    var options = {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      credentials: "same-origin"
+    };
+ 
+
+    // xhr.onreadystatechange = function () {
+    //   if (xhr.readyState === XMLHttpRequest.DONE) {
+    //     if(xhr.status === 200) {
+    //       console.log(xhr.responseText);
+    //     } else {
+    //       console.log(xhr.status);
+    //     }
+    //   }
+    // }
+
+    // xhr.open('GET', quoteUrl);
+    // xhr.send();
+
+    fetch(quoteUrl, options)
+    .then(
+      function(response) {
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+          return;
+        }
+
+        // Examine the text in the response
+        response.json().then(function(data) {
+          console.log(data);
+        });
+      }
+    )
+    .catch(function(err) {
+      console.log('Fetch Error :-S', err);
+    });
+  </script>
+</body>
+</html>

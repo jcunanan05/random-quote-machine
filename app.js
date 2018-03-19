@@ -6,22 +6,22 @@ app.set('view engine', 'ejs')
 
 
 app.get('/', function(req, res) {
-  var xhr = new XMLHttpRequest();
-  var quoteUrl = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1";
-  if (!xhr) return false;
+  // var xhr = new XMLHttpRequest();
+  // var quoteUrl = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=json&lang=en";
+  // if (!xhr) return false;
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if(xhr.status === 200) {
-        console.log(xhr.responseText);
-      } else {
-        console.log(xhr.status);
-      }
-    }
-  }
+  // xhr.onreadystatechange = function () {
+  //   if (xhr.readyState === XMLHttpRequest.DONE) {
+  //     if(xhr.status === 200) {
+  //       console.log(xhr.responseText);
+  //     } else {
+  //       console.log(xhr.status);
+  //     }
+  //   }
+  // }
 
-  xhr.open('GET', quoteUrl);
-  xhr.send();
+  // xhr.open('GET', quoteUrl);
+  // xhr.send();
 
   
 

@@ -12,10 +12,18 @@
 
   <div>
     <blockquote>
-      <p>Quote</p>
+      <% if(quote.quoteText){ %>
+        <p><%= quote.quoteText %></p>
+      <% } else { %>
+        <p>Quote</p>
+      <% } %>
 
       <footer>
-        <cite>- author</cite>
+        <% if(quote.quoteAuthor){ %>
+          <cite>- <%= quote.quoteAuthor %></cite>
+        <% } else { %>
+          <cite>- author</cite>
+        <% } %>
       </footer>
     </blockquote>
   </div>

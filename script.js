@@ -1,11 +1,26 @@
 var xhr = new XMLHttpRequest();
 var quoteUrl = "https://andruxnet-random-famous-quotes.p.mashape.com/";
+// var quoteObj = {};
+var quoteStatement = document.querySelector("#quote");
+var citation = document.querySelector("#cite");
+var newQuote = document.querySelector("#newQuote");
+
 var options = {
   headers: {
     "Accept": "application/json",
     "X-Mashape-Key" : "uAA1Caea0NmshDLoLVMwGVZ2cmfep1dyijVjsnhiabKVrafxfc"
   }
 };
+
+//event listeners
+newQuote.addEventListener("click", handleNewQuote);
+
+function handleNewQuote() {
+  console.log("new quote!!");
+
+  getQuote();
+}
+
 
 //tried using fetch and XHR API
 xhr.onreadystatechange = onreadystatechange;
@@ -32,10 +47,24 @@ function getQuote() {
 
 
 function updateQuote(responseText) {
-  var quotes = convertToJson(responseText);
+  var quote = convertToJson(responseText);
 
-  console.log(quotes);
+  //update html
+  if(quote.quote) quoteStatement.innerHTML = quote.quote;
+  if(quote.author) citation.innerHTML = "- " + quote.author;
+  console.log(quote);
+  // setQuoteObj(quote);
 }
+
+
+// function setQuoteObj(quote) {
+//   quoteObj = quote;
+// }
+
+
+// function getQuoteObj() {
+//   return quoteObj;
+// }
 
 
 function convertToJson(jsonText) {
@@ -45,7 +74,6 @@ function convertToJson(jsonText) {
 
   return JSON.parse(jsonText);
 } 
-
 
 // fetch(quoteUrl, options)
 // .then(

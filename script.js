@@ -1,14 +1,15 @@
 var xhr = new XMLHttpRequest();
 var quoteUrl = "https://andruxnet-random-famous-quotes.p.mashape.com/";
-// var quoteObj = {};
+var quoteObj = {};
 var quoteStatement = document.querySelector("#quote");
 var citation = document.querySelector("#cite");
 var newQuote = document.querySelector("#newQuote");
+var tweet = document.querySelector(".tweet");
 
 var options = {
   headers: {
-    "Accept": "application/json",
-    "X-Mashape-Key" : "uAA1Caea0NmshDLoLVMwGVZ2cmfep1dyijVjsnhiabKVrafxfc"
+    "X-Mashape-Key" : "uAA1Caea0NmshDLoLVMwGVZ2cmfep1dyijVjsnhiabKVrafxfc",
+    "Accept": "application/json"
   }
 };
 
@@ -35,6 +36,7 @@ function onreadystatechange() {
     //success
     // console.log(xhr.responseText);
     updateQuote(xhr.responseText);
+    updateTweet();
   }
 }
 
@@ -47,7 +49,11 @@ function getQuote() {
 
 
 function updateQuote(responseText) {
-  var quote = convertToJson(responseText);
+  var quote = "";
+  if(responseText) {
+    quote = convertToJson(responseText)
+    setQuoteObj(quote);
+  };
 
   //update html
   if(quote.quote) quoteStatement.innerHTML = quote.quote;
@@ -57,9 +63,17 @@ function updateQuote(responseText) {
 }
 
 
-// function setQuoteObj(quote) {
-//   quoteObj = quote;
-// }
+function updateTweet() {
+  var twitterLink = "https://twitter.com/intent/tweet?text=";
+  var doubleQuote = "%22";
+  var newLine = "%0A";
+  tweet.setAttribute("href", twitterLink + doubleQuote + quoteObj.quote + doubleQuote + newLine + " - " + quoteObj.author);
+}
+
+
+function setQuoteObj(quote) {
+  quoteObj = quote;
+}
 
 
 // function getQuoteObj() {

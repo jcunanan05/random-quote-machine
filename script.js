@@ -4,7 +4,7 @@ var quoteObj = {};
 var quoteStatement = document.querySelector("#quote");
 var citation = document.querySelector("#cite");
 var newQuote = document.querySelector("#newQuote");
-var tweet = document.querySelector(".tweet");
+var tweet = document.querySelector("#tweet");
 
 var options = {
   headers: {
@@ -67,7 +67,7 @@ function updateTweet() {
   var twitterLink = "https://twitter.com/intent/tweet?text=";
   var doubleQuote = "%22";
   var newLine = "%0A";
-  tweet.setAttribute("href", twitterLink + doubleQuote + quoteObj.quote + doubleQuote + newLine + " - " + quoteObj.author);
+  tweet.setAttribute("href", `${twitterLink}${doubleQuote}${quoteObj.quote}${doubleQuote}${newLine} - ${quoteObj.author}`);
 }
 
 

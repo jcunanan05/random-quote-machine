@@ -1,48 +1,78 @@
-html, body {
+html, body, .container {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .flex {
   display: flex;
 }
 
-.container {
+.column {
   flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  padding-top: 10%;
 }
 
-.container > * {
-  flex: 1 0 0;
-}
-
-.bottom-section {
-  padding-right: 25%;
-  justify-content: flex-end;
-  /* align-content: center; */
+.center-content {
   align-items: center;
-}
-
-.small-img {
-  height: auto;
-  width: 34px;
+  justify-content: center;
 }
 
 .center-text {
   text-align: center;
 }
 
+.main-section {
+  flex: 1 0 auto;
+}
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .bottom-section {
-    padding-right: 0;
-    justify-content: center;
-    /* align-content: center; */
-    align-items: center;
-  }
+div.box {
+  align-self: center;
+  width: 85%;
+  border: solid 2px black;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.button {
+  border: none;
+  border: solid 1px rgb(112, 198, 255);
+  background-color: rgb(112, 198, 255);
+  border-radius: 20%;
+  height: 1.7rem;
+  color: white;
+}
+
+.button:hover {
+  border: none;
+  border: solid 1px rgb(112, 198, 255);
+  background-color: white;
+  color: rgb(0, 110, 184);
+}
+
+.small-img {
+  height: auto;
+  width: 34px;
+  filter: invert(50%);
+}
+
+.small-img:hover {
+  filter: invert(0%);
+}
+
+figure.twitter-icon {
+  margin: 0;
+}
+
+footer.footer {
+  background-color: rgba(221, 221, 221, 0.55);
+  height: 2.5rem;
+}
+
+.bottom-section {
+  align-content: center;
 }

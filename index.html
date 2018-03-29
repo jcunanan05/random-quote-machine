@@ -4,30 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>Random Quote Machine</title>
 </head>
 <body>
-  <div class="flex container">
-    <h1 class="center-text">Random Quote Machine</h1>
+  <div class="flex column container">
+    <div class="flex column main-section">
+      <h1 class="center-text">Random Quote Machine!</h1>
 
+      <div class="box">
+        <section class="upper-section">
+          <blockquote class="center-text">
+            <p id="quote">Quote</p>
+      
+            <footer>
+              <cite id="cite">- author</cite>
+            </footer>
+          </blockquote>
+        </section>
+    
+        <section class="flex center-content bottom-section">
+          <button id="newQuote" class="button">New Quote</button>
+          <figure class="flex twitter-icon">
+            <a class="flex"
+              href="https://twitter.com/intent/tweet?text=Hello Word"
+              target="_blank">
+              <img class="small-img" src="https://cdn4.iconfinder.com/data/icons/bettericons/354/twitter-circle-128.png">
+            </a>
+          </figure>
+        </section>
+      </div>
+    </div>
 
-    <blockquote class="center-text">
-      <p id="quote">Quote</p>
-
-      <footer>
-        <cite id="cite">- author</cite>
-      </footer>
-    </blockquote>
-
-    <section class="flex bottom-section">
-      <button id="newQuote" class="left">New Quote</button>
-      <a class="tweet"
-        href="https://twitter.com/intent/tweet?text=Hello Word"
-        target="_blank">
-        <img class="small-img" src="https://powerfulpatients.org/wp-content/uploads/2016/02/twitter-logo-618-340x300.jpg">
-      </a>
-    </section>
+    <footer class="flex footer center-content">
+      by <a href="https://github.com/jcunanan05"> Jonathan Cunanan</a>
+    </footer>
   </div>
   
 

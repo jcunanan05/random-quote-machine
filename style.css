@@ -7,6 +7,8 @@ html, body, .container {
 
 body {
   font-family: 'Lato', sans-serif;
+  transition: background-color 1.3s;
+  color: white;
 }
 
 .flex {
@@ -30,18 +32,22 @@ body {
   flex: 1 0 auto;
 }
 
+h1 {
+  color: white;
+}
+
 div.box {
   align-self: center;
   width: 85%;
-  border: solid 2px black;
+  border: solid 2px white;
   padding-bottom: 16px;
   margin-bottom: 20px;
 }
 
 .button {
   border: none;
-  border: solid 1px rgb(112, 198, 255);
-  background-color: rgb(112, 198, 255);
+  background-color: rgba(255, 255, 255, 0.459);
+  /* filter: invert(50%); */
   border-radius: 20%;
   height: 1.7rem;
   color: white;
@@ -49,23 +55,23 @@ div.box {
 
 .button:hover {
   border: none;
-  border: solid 1px rgb(112, 198, 255);
-  background-color: white;
-  color: rgb(0, 110, 184);
+  background-color: rgba(255, 255, 255, 0.63);
+  color: rgb(0, 0, 0);
 }
 
 .small-img {
   height: auto;
   width: 34px;
-  filter: invert(50%);
+  filter: brightness(0) invert(1);
 }
 
 .small-img:hover {
-  filter: invert(0%);
+  filter: brightness(0) invert(0);
 }
 
 figure.twitter-icon {
   margin: 0;
+  flex: 0 1 34px;
 }
 
 footer.footer {
@@ -76,3 +82,5 @@ footer.footer {
 .bottom-section {
   align-content: center;
 }
+
+

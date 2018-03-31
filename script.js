@@ -3,8 +3,9 @@ var quoteUrl = "https://andruxnet-random-famous-quotes.p.mashape.com/";
 var quoteObj = {};
 var quoteStatement = document.querySelector("#quote");
 var citation = document.querySelector("#cite");
-var newQuote = document.querySelector("#newQuote");
+var newQuoteButton = document.querySelector("#newQuote");
 var tweet = document.querySelector("#tweet");
+var body = document.querySelector("body");
 
 var options = {
   headers: {
@@ -14,7 +15,7 @@ var options = {
 };
 
 //event listeners
-newQuote.addEventListener("click", handleNewQuote);
+newQuoteButton.addEventListener("click", handleNewQuote);
 
 function handleNewQuote() {
   console.log("new quote!!");
@@ -37,6 +38,7 @@ function onreadystatechange() {
     // console.log(xhr.responseText);
     updateQuote(xhr.responseText);
     updateTweet();
+    changeColors();
   }
 }
 
@@ -56,7 +58,7 @@ function updateQuote(responseText) {
   };
 
   //update html
-  if(quote.quote) quoteStatement.innerHTML = quote.quote;
+  if(quote.quote) quoteStatement.innerHTML = '"' + quote.quote + '"';
   if(quote.author) citation.innerHTML = "- " + quote.author;
   console.log(quote);
   // setQuoteObj(quote);
@@ -73,6 +75,27 @@ function updateTweet() {
 
 function setQuoteObj(quote) {
   quoteObj = quote;
+}
+
+
+function changeBackgroundColor(elements) {
+  var r = randomNumber(256);
+  var g = randomNumber(256);
+  var b = randomNumber(256);
+
+  elements.forEach(element => {
+    element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  });
+}
+
+
+function randomNumber(maxNumber) {
+  return Math.floor(Math.random() * maxNumber);
+}
+
+
+function changeColors() {
+  changeBackgroundColor([body]);
 }
 
 

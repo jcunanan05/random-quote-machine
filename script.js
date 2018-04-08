@@ -29,8 +29,11 @@ xhr.onreadystatechange = onreadystatechange;
 
 function onreadystatechange() {
   if (xhr.readyState === XMLHttpRequest.DONE) {
+    //fail
     if(xhr.status !== 200) {
       console.log('Looks like there was a problem. Status Code: ' + xhr.status);
+
+      return;
     } 
 
 
@@ -38,7 +41,7 @@ function onreadystatechange() {
     // console.log(xhr.responseText);
     updateQuote(xhr.responseText);
     updateTweet();
-    changeColors();
+    changeBackgroundColor([body]);
   }
 }
 
@@ -52,14 +55,17 @@ function getQuote() {
 
 function updateQuote(responseText) {
   var quote = "";
+  var author = 'unknown';
+
+  //leave the original html text if no response
   if(responseText) {
-    quote = convertToJson(responseText)
+    quote = JSON.parse(responseText);
     setQuoteObj(quote);
   };
 
   //update html
   if(quote.quote) quoteStatement.innerHTML = '"' + quote.quote + '"';
-  if(quote.author) citation.innerHTML = "- " + quote.author;
+  if(quote.author) citation.innerHTML = "- " + author;
   console.log(quote);
   // setQuoteObj(quote);
 }
@@ -94,9 +100,9 @@ function randomNumber(maxNumber) {
 }
 
 
-function changeColors() {
-  changeBackgroundColor([body]);
-}
+// function changeColors() {
+//   changeBackgroundColor([body]);
+// }
 
 
 // function getQuoteObj() {
@@ -104,13 +110,13 @@ function changeColors() {
 // }
 
 
-function convertToJson(jsonText) {
-  if (!JSON.parse(jsonText)) {
-    return "";
-  }
+// function convertToJson(jsonText) {
+//   if (!JSON.parse(jsonText)) {
+//     return "";
+//   }
 
-  return JSON.parse(jsonText);
-} 
+//   return JSON.parse(jsonText);
+// } 
 
 // fetch(quoteUrl, options)
 // .then(

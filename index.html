@@ -5,44 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>Random Quote Machine</title>
 </head>
-<body>
-  <div class="flex column container">
-    <main class="flex column main-section">
-      <h1 class="center-text">Random Quote Machine!</h1>
+<body class="flex columns">
+  <main class="flex columns content-center text-center">
+    <h1>Random Quote Machine</h1>
 
-      <div class="box">
-        <section class="upper-section">
-          <blockquote class="center-text">
-            <p id="quote">Quote</p>
-      
-            <footer>
-              <cite id="cite">- author</cite>
-            </footer>
-          </blockquote>
-        </section>
-    
-        <section class="flex center-content bottom-section">
-          <button id="newQuote" class="button">New Quote</button>
-          <figure class="flex twitter-icon">
-            <a id="tweet" class="flex"
-              href="https://twitter.com/intent/tweet?text=Hello Word"
-              target="_blank">
-              <img class="small-img" src="https://cdn4.iconfinder.com/data/icons/bettericons/354/twitter-circle-128.png">
-            </a>
-          </figure>
-        </section>
-      </div>
-    </main>
+    <section class="body js-body">
+      <blockquote>
+        <p class="js-quote">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, temporibus expedita totam laudantium, praesentium culpa quibusdam aut fugiat nobis deleniti dolor esse eius eos cumque? Autem natus soluta exercitationem dolorum."</p>
 
-    <footer class="flex footer center-content">
-      by <a href="https://github.com/jcunanan05"> Jonathan Cunanan</a>
-    </footer>
-  </div>
+        <footer>
+          <cite class="js-cite">- author</cite>
+        </footer>
+      </blockquote>
+
+
+      <div class="buttons">
+        <button class="js-new-quote">
+          Make a new quote!!
+        </button>
   
+        <a class="js-tweet" href="https://twitter.com/intent/tweet?text=Hello Word" target="_blank">
+          <button>Tweet</button>
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    Made by 
+    <a href="https://github.com/jcunanan05">
+      Jonathan Cunanan
+    </a>
+  </footer>
 
   <script type="text/javascript" src="./script.js">
   </script>

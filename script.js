@@ -1,11 +1,12 @@
 var xhr = new XMLHttpRequest();
 var quoteUrl = "https://andruxnet-random-famous-quotes.p.mashape.com/";
 var quoteObj = {};
-var quoteStatement = document.querySelector("#quote");
-var citation = document.querySelector("#cite");
-var newQuoteButton = document.querySelector("#newQuote");
-var tweet = document.querySelector("#tweet");
-var body = document.querySelector("body");
+var quoteStatement = document.querySelector(".js-quote");
+var citation = document.querySelector(".js-cite");
+var newQuoteButton = document.querySelector(".js-new-quote");
+var tweet = document.querySelector(".js-tweet");
+var body = document.querySelector(".js-body");
+var header = document.querySelector("h1");
 
 var options = {
   headers: {
@@ -41,7 +42,7 @@ function onreadystatechange() {
     // console.log(xhr.responseText);
     updateQuote(xhr.responseText);
     updateTweet();
-    changeBackgroundColor([body]);
+    changeColors();
   }
 }
 
@@ -55,19 +56,16 @@ function getQuote() {
 
 function updateQuote(responseText) {
   var quote = "";
-  var author = 'unknown';
 
   //leave the original html text if no response
   if(responseText) {
-    quote = JSON.parse(responseText);
+    quote = JSON.parse(responseText)[0];
     setQuoteObj(quote);
   };
 
   //update html
   if(quote.quote) quoteStatement.innerHTML = '"' + quote.quote + '"';
-  if(quote.author) citation.innerHTML = "- " + author;
-  console.log(quote);
-  // setQuoteObj(quote);
+  if(quote.author) citation.innerHTML = "- " + quote.author;
 }
 
 
@@ -84,39 +82,26 @@ function setQuoteObj(quote) {
 }
 
 
-function changeBackgroundColor(elements) {
+function changeColors() {
+  var randomColor = randomRGB();
+
+  body.style.borderColor = `${randomColor}`;
+  body.style.color = `${randomColor}`;
+  header.style.color = `${randomColor}`;
+}
+
+function randomRGB(){
   var r = randomNumber(256);
   var g = randomNumber(256);
   var b = randomNumber(256);
 
-  elements.forEach(element => {
-    element.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-  });
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
 
 function randomNumber(maxNumber) {
   return Math.floor(Math.random() * maxNumber);
 }
-
-
-// function changeColors() {
-//   changeBackgroundColor([body]);
-// }
-
-
-// function getQuoteObj() {
-//   return quoteObj;
-// }
-
-
-// function convertToJson(jsonText) {
-//   if (!JSON.parse(jsonText)) {
-//     return "";
-//   }
-
-//   return JSON.parse(jsonText);
-// } 
 
 // fetch(quoteUrl, options)
 // .then(

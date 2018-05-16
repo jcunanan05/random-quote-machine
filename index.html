@@ -15,35 +15,38 @@
     <h1>Random Quote Machine</h1>
 
     <section class="body js-body">
-      <blockquote>
-        <p class="js-quote">"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, temporibus expedita totam laudantium, praesentium culpa quibusdam aut fugiat nobis deleniti dolor esse eius eos cumque? Autem natus soluta exercitationem dolorum."</p>
+      <blockquote class="quote">
+        <p class="js-quote">"Wait a moment..."</p>
 
         <footer>
-          <cite class="js-cite">- author</cite>
+          <cite class="js-cite">- unknown</cite>
         </footer>
       </blockquote>
 
 
-      <div class="buttons">
-        <button class="js-new-quote">
-          Make a new quote!!
+      <div class="flex columns">
+        <button class="button success js-new-quote">
+          Make a New Quote!!
         </button>
   
-        <a class="js-tweet" href="https://twitter.com/intent/tweet?text=Hello Word" target="_blank">
-          <button>Tweet</button>
+        <a class="flex columns js-tweet button-link" href="https://twitter.com/intent/tweet?text=Hello Word" target="_blank">
+          <button class="flex button content-center">
+            Tweet &nbsp;
+            <img class="small-img" src="twitter-icon2.png">
+          </button>
         </a>
       </div>
     </section>
   </main>
   
-  <footer>
-    Made by 
-    <a href="https://github.com/jcunanan05">
+  <footer class="flex footer all-center">
+    Made by &nbsp;
+    <a href="https://github.com/jcunanan05" target="_blank">
       Jonathan Cunanan
     </a>
   </footer>
 
-  <script type="text/javascript" src="./script.js">
+  <script type="text/javascript" src="script.js">
   </script>
 </body>
 </html>

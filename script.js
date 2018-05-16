@@ -37,12 +37,11 @@ function onreadystatechange() {
       return;
     } 
 
-
     //success
     // console.log(xhr.responseText);
     updateQuote(xhr.responseText);
     updateTweet();
-    changeColors();
+    // changeColors();
   }
 }
 

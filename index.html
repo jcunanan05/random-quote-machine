@@ -7,44 +7,46 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="autoprefix-style.css">
   <title>Random Quote Machine</title>
 </head>
-<body class="flex columns">
-  <main class="flex columns content-center text-center">
-    <h1>Random Quote Machine</h1>
-
-    <section class="body js-body">
-      <blockquote class="quote">
-        <p class="js-quote">"Wait a moment..."</p>
-
-        <footer>
-          <cite class="js-cite">- unknown</cite>
-        </footer>
-      </blockquote>
-
-
-      <div class="flex columns">
-        <button class="button success js-new-quote">
-          Make a New Quote!!
-        </button>
+<body>
+  <div class="flex columns content-center">
+    <main class="flex columns content-center text-center">
+      <h1>Random Quote Machine</h1>
   
-        <a class="flex columns js-tweet button-link" href="https://twitter.com/intent/tweet?text=Hello Word" target="_blank">
-          <button class="flex button content-center">
-            Tweet &nbsp;
-            <img class="small-img" src="twitter-icon2.png">
+      <section class="body js-body">
+        <blockquote class="quote">
+          <p class="js-quote">"Wait a moment..."</p>
+  
+          <footer>
+            <cite class="js-cite">- unknown</cite>
+          </footer>
+        </blockquote>
+  
+  
+        <div class="flex columns">
+          <button class="button success js-new-quote">
+            Make a New Quote!!
           </button>
-        </a>
-      </div>
-    </section>
-  </main>
-  
-  <footer class="flex footer all-center">
-    Made by &nbsp;
-    <a href="https://github.com/jcunanan05" target="_blank">
-      Jonathan Cunanan
-    </a>
-  </footer>
+    
+          <a class="flex columns js-tweet button-link" href="https://twitter.com/intent/tweet?text=Hello Word" target="_blank">
+            <button class="flex button content-center">
+              Tweet &nbsp;
+              <img class="small-img" src="resources/twitter-icon2.png">
+            </button>
+          </a>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="flex footer all-center">
+      Made by &nbsp;
+      <a href="https://github.com/jcunanan05" target="_blank">
+        Jonathan Cunanan
+      </a>
+    </footer>
+  </div>
 
   <script type="text/javascript" src="script.js">
   </script>

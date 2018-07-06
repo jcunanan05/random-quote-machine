@@ -2,8 +2,6 @@
 
 This is a mini-project that I made for fCC front-end development projects. It's a fun project that spouts a new quote when the button is clicked. A feature to tweet it also is added!! I used HTML, Vanilla CSS and JS!!
 
-![Random Quote](https://raw.githubusercontent.com/jcunanan05/random-quote-machine/master/resources/sshot.PNG)
-
 ## Things that I used / learned on the way
 
 ### HTML

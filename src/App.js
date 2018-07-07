@@ -1,18 +1,39 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'bulma/css/bulma.min.css';
 
 class App extends Component {
+
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Create React App</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="hero is-fullheight">
+        <main className="section">
+          <div className="container">
+            <h1 className="title is-2 has-text-centered">
+              Random Quote Machine!!
+            </h1>
+
+            <article className="box has-text-centered">
+              <h2 className="subtitle is-2">
+                "I am batman"
+              </h2>
+
+              <div className="container">
+                <button className="button is-rounded is-info">
+                  tweet
+                </button>
+
+                <button className="button is-primary">
+                  new quote
+                </button>
+              </div>
+            </article>
+          </div>
+        </main>
+
+        <footer className="footer has-text-centered">
+          Copyright &copy; 2018. All rights reserved.
+        </footer>
       </div>
     );
   }

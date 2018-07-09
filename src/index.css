@@ -1,1 +1,63 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
+html, body {
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-flow: column;
+  min-height: inherit;
+}
+
+.main {
+  flex: 1 0 33em;
+}
+
+.main__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.quote-box {
+  max-width: 40em;
+  margin-top: 2.5em;
+  border-radius: 0.2em 0.2em 0.1em 0.1em;
+  box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+}
+
+.blockquote {
+  padding: 1em;
+  padding-bottom: 2em;
+}
+
+.button-section {
+  padding: 0.5em 1em;
+  border-top: 1px solid rgba(10,10,10,.1);
+  justify-content: space-between;
+}
+
+.button-section .button + .button {
+  margin-left: 1em;
+}
+
+.title__text {
+  font-weight: 400;
+}
+
+.title__text .double-quote {
+  padding: 0 0.2em 0 0;
+}
+
+.title__text .double-quote:last-child {
+  padding: 0 0 0 0.2em;
+}
+
+.subtitle__author {
+  text-align: right;
+}

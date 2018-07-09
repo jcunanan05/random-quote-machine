@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Header = props => (
-  <header>
-    <h1 className="title is-2 has-text-centered">
+  <header className="header has-text-centered">
+    <h1 className="title">
       {props.title}
     </h1>
   </header>

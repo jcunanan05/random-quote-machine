@@ -1,13 +1,15 @@
 import React from 'react';
 
 const BlockQuote = props => (
-  <blockquote>
-    <h2 className="subtitle is-2">
-      "{props.quote}"
+  <blockquote className="blockquote">
+    <h2 id="text" className="title title__text has-text-centered">
+      <span className="double-quote">"</span>
+      {props.quote}
+      <span className="double-quote">"</span>
     </h2>
 
     <footer>
-      <p className="subtitle is-4">
+      <p id="author" className="subtitle subtitle__author">
         - {props.author}
       </p>
     </footer>

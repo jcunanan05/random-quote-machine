@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import NewQuote from './NewQuote';
 import Tweet from './Tweet';
 import BlockQuote from './BlockQuote';
 
-const QuoteBox = props => (
-  <section className="column section is-half">
-    <div className="section box">
-      
-      <BlockQuote 
-        quote={props.quote}
-        author={props.author} />
+class QuoteBox extends Component {
+  state = {
+    quote: {
+      text: 'Santa Claus is coming to town',
+      author: 'christmas carols'
+    }
+  }
 
-      <div className="columns section is-multiline is-3">
-        <NewQuote text={'New Quote!'} />
+  handleNewQuote = () => {
+    alert('heyy');
+  }
 
-        <Tweet text={'Tweet'} />
-      </div>
-    </div>
-  </section>
-);
+  render() {
+    const quote = this.state.quote;
+
+    return (
+      <section id="quote-box" className="quote-box">
+        <BlockQuote 
+          quote={quote.text}
+          author={quote.author} />
+
+        <div className="button-section is-flex-mobile">
+          <NewQuote 
+            text={'New Quote!'}
+            handleNewQuote={this.handleNewQuote}/>
+          
+          <Tweet />
+        </div>
+      </section>
+    );
+  }
+}
 
 export default QuoteBox;

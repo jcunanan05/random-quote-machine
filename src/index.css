@@ -28,16 +28,21 @@ html, body {
   max-width: 40em;
   margin-top: 2.5em;
   border-radius: 0.2em 0.2em 0.1em 0.1em;
-  box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+  padding: 0;
 }
 
 .blockquote {
-  padding: 1em;
-  padding-bottom: 2em;
+  padding: 2em 1em 2em 1em;
+  letter-spacing: 0.01em;
+}
+
+.blockquote :nth-child(1) + :nth-child(2) {
+  margin-top: 2em;
 }
 
 .button-section {
-  padding: 0.5em 1em;
+  padding: 0.8em 1em;
+  /* got the rgba color from bulma's .box */
   border-top: 1px solid rgba(10,10,10,.1);
   justify-content: space-between;
 }
@@ -60,4 +65,5 @@ html, body {
 
 .subtitle__author {
   text-align: right;
+  font-weight: 700;
 }

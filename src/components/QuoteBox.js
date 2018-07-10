@@ -19,7 +19,7 @@ class QuoteBox extends Component {
     const quote = this.state.quote;
 
     return (
-      <section id="quote-box" className="quote-box">
+      <section id="quote-box" className="box quote-box">
         <BlockQuote 
           quote={quote.text}
           author={quote.author} />

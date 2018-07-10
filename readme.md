@@ -1,6 +1,6 @@
 # Random Quote Machine
 
-This is a mini-project that I made for fCC front-end development projects. It's a fun project that spouts a new quote when the button is clicked. A feature to tweet it also is added!! I used HTML, Vanilla CSS and JS!!
+This is a mini-project that I made for fCC front-end libraries development projects. It's a fun project that spouts a new quote when the button is clicked. A feature to tweet it also is added!! I used [React](https://reactjs.org/) to build this project!
 
 ## Things that I used / learned on the way
 
@@ -16,18 +16,28 @@ This is a mini-project that I made for fCC front-end development projects. It's 
 * AutoPrefixer
 
 ### JS
-* Namespace pollution
-* Handling AJAX requests with the good'ol XHR API
-* Handling AJAX with Fetch API
-* Passing request headers
-* Getters and Setters
-* Math.floor() and Math.random()
-* Template Literals with ES6 (sorry too lazy to type string concatenation) =))
+* [Functional and class Components](https://reactjs.org/docs/components-and-props.html#functional-and-class-components)
+* [```React.Fragments```](https://reactjs.org/docs/fragments.html)
+* Handling AJAX with [Fetch API](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
+* [Component Composition](https://reactjs.org/docs/components-and-props.html#composing-components)
+* [Passing State up](https://reactjs.org/docs/lifting-state-up.html)
+* [Public Class fields syntax (_experimental_)](https://babeljs.io/docs/en/babel-plugin-transform-class-properties/)
+
 
 ### Resources Read / Watched to learn how to build
-* Wesbos What the Flexbox
-* Wesbos Javascipt30
+* [Wesbos React](https://reactforbeginners.com/)
 * Flexbox Mega Article at Medium
-* Jeffrey Way Article 30 css selectors you must memorize (not really)
-* Freecodecamp Forum sending headers on AJAX requests
-* CSS tricks Media queries
+* [Jeffrey Way Article 30 css selectors you must memorize (not really)](https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048)
+* [csstricks Media queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+
+
+## Work done today
+* Included icons on buttons (_'tweet' text hidden on mobile_)
+* Made card-like layout
+
+## To be done
+* Fetch quotes from an API when _New Quote_ button is clicked
+
+## Bonus 
+* Random image background on click
+* Fade effects on text

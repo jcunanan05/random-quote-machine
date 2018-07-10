@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NewQuote from './NewQuote';
 import Tweet from './Tweet';
 import BlockQuote from './BlockQuote';
+import request from '../request';
 
 class QuoteBox extends Component {
   state = {
@@ -11,8 +12,22 @@ class QuoteBox extends Component {
     }
   }
 
-  handleNewQuote = () => {
-    alert('heyy');
+  getNewQuote = () => {
+    request.getQuote(data => {
+      //set fetched quote data as state
+      const quote = {
+        text: data[0].quote,
+        author: data[0].author
+      };
+
+      this.setState({
+        quote
+      });
+    });
+  }
+
+  componentDidMount() {
+    this.getNewQuote();
   }
 
   render() {
@@ -27,7 +42,7 @@ class QuoteBox extends Component {
         <div className="button-section is-flex-mobile">
           <NewQuote 
             text={'New Quote!'}
-            handleNewQuote={this.handleNewQuote}/>
+            handleNewQuote={this.getNewQuote}/>
           
           <Tweet />
         </div>

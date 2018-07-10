@@ -10,7 +10,7 @@ const BlockQuote = props => (
 
     <footer>
       <p id="author" className="subtitle subtitle__author">
-        - {props.author}
+        - <em>{props.author}</em>
       </p>
     </footer>
   </blockquote>

@@ -32,8 +32,10 @@ This is a mini-project that I made for fCC front-end libraries development proje
 
 
 ## Work done today
-* Fetch quotes from an API when _New Quote_ button is clicked
+* Add loading spinner on new quote click
+
+## Todo
+* Fade effects on text
 
 ## Bonus 
 * Random image background on click
-* Fade effects on text

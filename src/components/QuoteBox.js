@@ -9,10 +9,15 @@ class QuoteBox extends Component {
     quote: {
       text: 'Never say never',
       author: 'Justin Bieber'
-    }
+    },
+
+    isQuoteLoaded: false
   }
 
   getNewQuote = () => {
+    //setQuoteLoaded to false;
+    this.setState({isQuoteLoaded: false});
+
     request.getQuote(data => {
       //set fetched quote data as state
       const quote = {
@@ -22,6 +27,9 @@ class QuoteBox extends Component {
       
       //update quote
       this.setState({quote});
+
+      //set quoteLoaded to true
+      this.setState({isQuoteLoaded: true});
     });
   }
 
@@ -40,7 +48,8 @@ class QuoteBox extends Component {
         <div className="button-section is-flex-mobile">
           <NewQuote 
             text={'New Quote!'}
-            handleNewQuote={this.getNewQuote}/>
+            handleNewQuote={this.getNewQuote}
+            isLoading={!this.state.isQuoteLoaded}/>
           
           <Tweet quote={quote} />
         </div>

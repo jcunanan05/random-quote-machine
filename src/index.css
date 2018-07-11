@@ -25,6 +25,7 @@ html, body {
 }
 
 .quote-box {
+  min-width: 12em;
   max-width: 40em;
   margin-top: 2.5em;
   border-radius: 0.2em 0.2em 0.1em 0.1em;

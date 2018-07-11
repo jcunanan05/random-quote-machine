@@ -68,3 +68,22 @@ html, body {
   text-align: right;
   font-weight: 700;
 }
+
+/* fade effect for reactt css transitions */
+.fade-enter {
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  /* transition: all 500ms ease-in; */
+}
+
+.fade-exit {
+  display: none;
+}
+
+.fade-exit.fade-exit-active {
+  display: none;
+}

@@ -32,10 +32,6 @@ This is a mini-project that I made for fCC front-end libraries development proje
 
 
 ## Work done today
-* Included icons on buttons (_'tweet' text hidden on mobile_)
-* Made card-like layout
-
-## To be done
 * Fetch quotes from an API when _New Quote_ button is clicked
 
 ## Bonus 

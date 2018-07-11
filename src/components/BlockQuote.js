@@ -4,13 +4,13 @@ const BlockQuote = props => (
   <blockquote className="blockquote">
     <h2 id="text" className="title title__text has-text-centered">
       <span className="double-quote">"</span>
-      {props.quote}
+      {props.quote.text}
       <span className="double-quote">"</span>
     </h2>
 
     <footer>
       <p id="author" className="subtitle subtitle__author">
-        - <em>{props.author}</em>
+        - <em>{props.quote.author}</em>
       </p>
     </footer>
   </blockquote>

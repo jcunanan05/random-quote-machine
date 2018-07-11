@@ -7,8 +7,8 @@ import request from '../request';
 class QuoteBox extends Component {
   state = {
     quote: {
-      text: 'Santa Claus is coming to town',
-      author: 'christmas carols'
+      text: 'Never say never',
+      author: 'Justin Bieber'
     }
   }
 
@@ -19,14 +19,13 @@ class QuoteBox extends Component {
         text: data[0].quote,
         author: data[0].author
       };
-
-      this.setState({
-        quote
-      });
+      
+      //update quote
+      this.setState({quote});
     });
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.getNewQuote();
   }
 
@@ -36,15 +35,14 @@ class QuoteBox extends Component {
     return (
       <section id="quote-box" className="box quote-box">
         <BlockQuote 
-          quote={quote.text}
-          author={quote.author} />
+          quote={quote} />
 
         <div className="button-section is-flex-mobile">
           <NewQuote 
             text={'New Quote!'}
             handleNewQuote={this.getNewQuote}/>
           
-          <Tweet />
+          <Tweet quote={quote} />
         </div>
       </section>
     );

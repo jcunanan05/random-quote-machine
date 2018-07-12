@@ -8,14 +8,39 @@ html, body {
   min-height: 100vh;
 }
 
+:root {
+  --opaque-white: rgba(255, 255, 255, 0.91);
+}
+
 #root {
   display: flex;
   flex-flow: column;
   min-height: inherit;
 }
 
+.background-img {
+  background-image: url('https://picsum.photos/1280/720?random');
+  transition: background-image 1s ease-in;
+}
+
+.background-img--overlay {
+  background-color: rgba(255, 255, 255, 0.342);
+  transition: background-color 1s ease-in;
+}
+
 .main {
   flex: 1 0 33em;
+}
+
+.header {
+  background-color: var(--opaque-white, rgba(255, 255, 255, 0.91));
+  padding: 1em 1.5em 1em 1.5em;
+  border-radius: 0.2em;
+}
+
+.header__title {
+  font-size: 2.5em;
+  font-weight: 400;
 }
 
 .main__container {
@@ -25,6 +50,7 @@ html, body {
 }
 
 .quote-box {
+  background-color: var(--opaque-white, rgba(255, 255, 255, 0.91));
   min-width: 12em;
   max-width: 40em;
   margin-top: 2.5em;
@@ -54,6 +80,7 @@ html, body {
 
 .title__text {
   font-weight: 400;
+  font-size: 2.1em;
 }
 
 .title__text .double-quote {

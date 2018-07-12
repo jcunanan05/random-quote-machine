@@ -4,6 +4,7 @@ import Tweet from './Tweet';
 import BlockQuote from './BlockQuote';
 import request from '../request';
 
+
 class QuoteBox extends Component {
   state = {
     quote: {
@@ -18,6 +19,7 @@ class QuoteBox extends Component {
     //setQuoteLoaded to false;
     this.setState({isQuoteLoaded: false});
 
+    //fetch quote from random Quote Api
     request.getQuote(data => {
       //set fetched quote data as state
       const quote = {
@@ -30,6 +32,9 @@ class QuoteBox extends Component {
 
       //set quoteLoaded to true
       this.setState({isQuoteLoaded: true});
+
+      //change overlay color
+      this.props.changeOverlayColor();
     });
   }
 

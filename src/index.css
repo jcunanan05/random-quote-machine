@@ -19,7 +19,9 @@ html, body {
 }
 
 .background-img {
-  background-image: url('https://picsum.photos/1280/720?random');
+  background-image: url('https://picsum.photos/1920/1080?random');
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: background-image 1s ease-in;
 }
 
